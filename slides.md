@@ -52,7 +52,9 @@ Firedrake's mission statement is very similar: ...
 
 --
 
-Two-layer abstraction for FEM computation from high-level descriptions:
+### SciPy: high-level abstractions for scientific computing
+
+Two-layer abstraction for FEM computations from high-level descriptions:
 * Firedrake: a portable finite-element computation framework  
   *Drive FE computations from a high-level problem specification*
 * PyOP2: a high-level interface to unstructured mesh based methods  
@@ -289,7 +291,8 @@ midpoint = op2.Kernel(kernel_code, "midpoint")
 *             coordinates(op2.READ, cell2vertex))
 ```
 
-Kernels as abstract syntax tree (AST) or C string
+Kernels as abstract syntax tree (AST), C string or Python function
+(not currently compiled!)
 ]
 
 ???
