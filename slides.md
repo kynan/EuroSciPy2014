@@ -68,6 +68,36 @@ over an unstructured mesh in parallel.
 
 ---
 
+## Solving the Helmholtz equation in Python using Firedrake
+
+`$$\int_\Omega \nabla v \cdot \nabla u - \lambda v u ~dV = \int_\Omega v f ~dV$$`
+
+```python
+from firedrake import *
+
+# Read a mesh and define a function space
+mesh = Mesh('filename')
+V = FunctionSpace(mesh, "Lagrange", 1)
+
+# Define forcing function for right-hand side
+f = Expression("- (lmbda + 2*(n**2)*pi**2) * sin(X[0]*pi*n) * sin(X[1]*pi*n)",
+               lmbda=1, n=8)
+
+# Set up the Finite-element weak forms
+u = TrialFunction(V)
+v = TestFunction(V)
+
+lmbda = 1
+a = (dot(grad(v), grad(u)) - lmbda * v * u) * dx
+L = v * f * dx
+
+# Solve the resulting finite-element equation
+p = Function(V)
+solve(a == L, p)
+```
+
+---
+
 ## The Firedrake/PyOP2 tool chain
 
 ![Firedrake](images/firedrake_toolchain.svg)
