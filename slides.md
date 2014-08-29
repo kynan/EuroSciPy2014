@@ -239,7 +239,7 @@ it!
 * ``Maps`` – Define connectivity between entities in different ``Sets``
 
 ### Data
-* ``Dats`` – Defined on sets (hold fields: pressure, temperature, etc.)
+* ``Dats`` – Defined on ``Sets`` (hold data, completely abstracted vector)
 * ``Globals`` – not associated to a ``Set`` (reduction variables, parameters)
 * ``Consts`` – Global, read-only data
 ]
@@ -250,9 +250,9 @@ it!
 * Read / write / increment data accessed via maps
 
 ### Linear algebra
-* Sparsities defined by mappings
-* Matrix data on sparsities
-* Kernels compute a local matrix – PyOP2 handles global assembly
+* ``Sparsity`` patterns defined by ``Maps``
+* ``Mat`` – Matrix data on sparsities
+* Kernels compute local matrix – PyOP2 handles global assembly
 ]
 
 ???
