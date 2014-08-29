@@ -162,12 +162,11 @@ expressed as a local independent kernel as I mentioned earlier.
 This diagram shows an overview of the Firedrake / PyOP2 toolchain:
 
 * Decoupling of Firedrake (FEM) and PyOP2 (parallelisation) layers
-* (mostly) DOLFIN compatible API
 * UFL to describe finite-element discretisation
+* FE weak forms compiled into kernels
+* FE assembly as PyOP2 parallel loops
 * PETSc for linear/nonlinear solvers and mesh building / distribution
 * Platform-specific runtime code generation and JIT compilation
-* Portability for unstructured mesh applications: FEM, non-FEM or combinations
-* Extensible framework beyond FEM computations (e.g. image processing)
 * Revisit this diagram later
 
 ---
@@ -175,6 +174,21 @@ This diagram shows an overview of the Firedrake / PyOP2 toolchain:
 ## Two-layered abstraction: Separation of concerns
 
 ![Separation of concerns](images/firedrake_toolchain_users.svg)
+
+???
+
+Separating the problem into two abstraction layers gives us a real
+separation of concerns: contributors can work only in their area of
+expertise without having to be concerned, or even familiar, with the
+other layer.
+
+This is not just a theory, this is how we actually work in our research
+group! We have mathematicians in the group how are deeply familiar with
+the FEM and work on e.g. adding support for further discretisations but
+have little expertise with computer architecture or parallel programming
+- and don't need to! On the other hand we have compiler experts who
+reason about optimising kernels as abstract loop nests without needing
+to know or care where those kernels come from.
 
 ---
 
