@@ -424,6 +424,12 @@ void wrap_midpoint(int boffset, int nblocks,
 
 ---
 
+## PyOP2 Backend Selection
+
+.scale[![PyOP2 backends](images/pyop2_backends.svg)]
+
+---
+
 ## The Firedrake/PyOP2 tool chain
 
 ![Firedrake](images/firedrake_toolchain.svg)
