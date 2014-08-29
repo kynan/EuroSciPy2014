@@ -226,20 +226,19 @@ Some operations are followed by a *reduction* which aggregates contributions
 from these local operations. In FEM that is the assembly of the sparse linear
 system.
 
-What I am going to present to you today is a framework which abstracts this
-concept and implements the efficient, portable execution of computational
-kernels over unstructured meshes on different hardware platforms.
-
-PyOP2 is a domain-specific language embedded in Python for writing portable
-programmes which efficiently run on different platforms without any changes to
-the source. How do we do this using Python, which you might think is slow?
+PyOP2 is a domain-specific language embedded in Python which abstracts
+this concept and allows writing portable programmes which efficiently
+run on different platforms without any changes to the source. How do we
+do this using Python, which you might think is slow?
 
 Portability and efficiency is achieved through generating platform- and
 problem-specific code at runtime, just-in-time compiling it and executing it
 natively for the chosen architecture.
 
-Why at runtime? Only synthesis, no need for analysis (parsing), just execute
-it!
+Why at runtime? No need for analysis / parsing code (the hard part),
+only sythesis / generating code (the easy part). All the information is
+available, just execute the code, reason about and introspect the
+(Python) objects!
 
 ---
 
