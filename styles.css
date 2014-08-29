@@ -80,6 +80,9 @@ code.has-jax {
   color: #f3f3f3;
   line-height: 0.9em;
 }
+.inverse h2 {
+  font-size: 1.75em;
+}
 
 /* Two-column layout */
 .left-column {

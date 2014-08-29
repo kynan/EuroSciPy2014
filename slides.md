@@ -2,6 +2,8 @@ class: center, middle, inverse
 
 # Firedrake: a High-level, Portable Finite Element Computation Framework
 
+## http://firedrakeproject.org
+
 ## **Florian Rathgeber**<sup>1</sup>, Lawrence Mitchell<sup>1</sup>, David Ham<sup>1,2</sup>, Michael Lange<sup>3</sup>, Andrew McRae<sup>2</sup>, Fabio Luporini<sup>1</sup>, Gheorghe-teodor Bercea<sup>1</sup>, Paul Kelly<sup>1</sup>
 
 Slides: http://kynan.github.io/EuroSciPy2014
