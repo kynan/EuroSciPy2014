@@ -29,6 +29,9 @@ h1, h2, h3 {
   bottom: 3em;
   font-size: 80%;
 }
+.reference {
+  font-size: 50%;
+}
 li { padding-bottom: .25em; }
 .red { color: #fa0000; }
 .large { font-size: 2em; }
