@@ -172,6 +172,12 @@ This diagram shows an overview of the Firedrake / PyOP2 toolchain:
 
 ---
 
+## Two-layered abstraction: Separation of concerns
+
+![Separation of concerns](images/firedrake_toolchain_users.svg)
+
+---
+
 class: center, middle
 # Parallel computations on unstructured meshes with PyOP2
 
@@ -552,12 +558,6 @@ def solve(problem, solution,
     * assemble Jacobian matrix
     * assemble residual vector
     * solve linear system using PETSc KSP
-
----
-
-## Two-layered abstraction: Separation of concerns
-
-![Separation of concerns](images/firedrake_toolchain_users.svg)
 
 ---
 
