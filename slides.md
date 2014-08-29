@@ -54,37 +54,6 @@ for solving computationally: these integral evaluations are *local*,
 
 ---
 
-.scale[![Firedrake](http://firedrakeproject.org/_static/banner.png)]
-
-> Firedrake is an automated system for the portable solution of partial
-> differential equations using the finite element method (FEM).
->
-> .source[&mdash; firedrakeproject.org]
-
-???
-
-Firedrake's mission statement is very similar: ...
-
---
-
-### SciPy: high-level abstractions for scientific computing
-
-Two-layer abstraction for FEM computations from high-level descriptions:
-* Firedrake: a portable finite-element computation framework  
-  *Drive FE computations from a high-level problem specification*
-* PyOP2: a high-level interface to unstructured mesh based methods  
-  *Efficiently execute kernels over an unstructured grid in parallel*
-
-???
-
-The key concept is a layering of abstractions, with Firedrake as a portable
-finite-element computation framework on top, allowing to drive computations from
-a very high-level problem specification. The lower layer is PyOP2, a framework
-for unstructured mesh computations, whose role is to efficiently execute kernels
-over an unstructured mesh in parallel.
-
----
-
 ## Solving the Helmholtz equation in Python using Firedrake
 
 `$$\int_\Omega \nabla v \cdot \nabla u - \lambda v u ~dV = \int_\Omega v f ~dV$$`
@@ -101,17 +70,86 @@ f = Expression("- (lmbda + 2*(n**2)*pi**2) * sin(X[0]*pi*n) * sin(X[1]*pi*n)",
                lmbda=1, n=8)
 
 # Set up the Finite-element weak forms
-u = TrialFunction(V)
-v = TestFunction(V)
+*u = TrialFunction(V)
+*v = TestFunction(V)
 
-lmbda = 1
-a = (dot(grad(v), grad(u)) - lmbda * v * u) * dx
-L = v * f * dx
+*lmbda = 1
+*a = (dot(grad(v), grad(u)) - lmbda * v * u) * dx
+*L = v * f * dx
 
 # Solve the resulting finite-element equation
 p = Function(V)
 solve(a == L, p)
 ```
+
+[Unified Form Language (UFL)](https://bitbucket.org/fenics-project/ufl)
+from the [FEniCS project](http://fenicsproject.org) to describe weak
+form of PDE
+
+???
+
+Now how do we use Firedrake to solve such a PDE?
+
+As a mathematician you write down the equation in what is called the
+weak form. Firedrake uses the Unified Form Language from the FEniCS
+project to express this weak form in Python as almost literal
+transcription (the highlighted bit).
+
+The entire code the user needs to write to solve this PDE is what you
+see on the slide:
+* read geometry (mesh) from file
+* define the PDE
+* solve it
+
+To anyone familiar with the FEniCS project this will be familiar:
+Firedrake intentionally implements the same API.
+
+The solve is of course where the magic happens and we'll get to that.
+
+---
+
+## SciPy: high-level abstractions for scientific computing
+
+???
+
+So what is Firedrake and how does it fit in the SciPy ecosystem?
+
+SciPy is, at least to some extent, about building high-level
+abstractions for scientific computing, which are computationally
+efficient but at the same time easy to use (think NumPy for array
+operations).
+
+--
+
+.scale[![Firedrake](http://firedrakeproject.org/_static/banner.png)]
+
+> Firedrake is an automated system for the portable solution of partial
+> differential equations using the finite element method (FEM).
+>
+> .source[&mdash; firedrakeproject.org]
+
+???
+
+Firedrake is one such abstraction for the portable solution of partial
+differential equations using the finite element method.
+
+--
+
+Two-layer abstraction for FEM computations from high-level descriptions:
+* Firedrake: a portable finite-element computation framework  
+  *Drive FE computations from a high-level problem specification*
+* PyOP2: a high-level interface to unstructured mesh based methods  
+  *Efficiently execute kernels over an unstructured mesh in parallel*
+
+???
+
+In fact it is actually two abstractions layered on top of each other,
+with Firedrake as a portable finite-element computation framework on top
+for solving problems at a very high level. The lower layer that does all
+the computational heavy lifting is PyOP2, a framework for unstructured
+mesh computations, whose role is to efficiently execute kernels over an
+unstructured mesh in parallel. That works because FEM assembly can be
+expressed as a local independent kernel as I mentioned earlier.
 
 ---
 
