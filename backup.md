@@ -4,6 +4,31 @@ class: center, middle, inverse
 
 ---
 
+## Portable, Extensible Toolkit for Scientific Computation (PETSc)
+
+.left70[
+![PETSc
+architecture](https://upload.wikimedia.org/wikipedia/commons/4/4a/Petsc-components.svg)
+
+.reference["Petsc-components" by Barry Smith and Jed Brown - PETSc source
+repository and users manual.
+Via Wikimedia Commons -
+https://commons.wikimedia.org/wiki/File:Petsc-components.svg#mediaviewer/File:Petsc-components.svg]
+]
+
+.right30[
+### PETSc
+Data structures and algorithms for solving PDEs (in parallel)
+
+### petsc4py
+Python bindings for PETSc (via Cython)
+
+### mpi4py
+Python bindings for Message Passing Interface (MPI)
+]
+
+---
+
 ## Distributed Parallel Computations with MPI
 
 .scale[![Decomposed mesh](images/pyop2_mpi_mesh.svg)]
