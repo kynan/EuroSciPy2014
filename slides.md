@@ -14,10 +14,14 @@ Slides: http://kynan.github.io/EuroSciPy2014
 
 ???
 
-Good morning! My name is Florian and it is my pleasure to introduce Firedrake, a
-re-imagination of the FEniCS concept by composing domain-specific abstraction.
-Firedrake is developed by a group at Imperial, some which are in the room, so
-I'll be presenting work of a number of people.
+Good morning! After this excellent keynote I hope I can keep your
+attention for another 25min before the recaffeination. My name is
+Florian and it is my pleasure to introduce Firedrake, a high-level,
+portable finite element computation framework implemented, of course, in
+Python.  Firedrake is a fairly young project and has been developed by a
+group at Imperial over the past year. It builds on work I presented at
+SciPy in Austin last year and a number of packages in the SciPy
+ecosystem.
 
 ---
 
@@ -25,19 +29,28 @@ background-image:url(images/fem.svg)
 
 ???
 
-* unstructured application for solving PDEs: FEM
+* solving PDEs using FEM, not going into details
 * focus on assembly: matrix + vector (see diagram)
 * evaluating problem-/PDE-specific integral for each element of the mesh
 * nice property: *local* and *independent* -> parallelisation
 
-Let me start with an unstructured application that is of particular relevance
-for solving PDEs, the finite element method. I want to focus in particular on
-assembly of the sparse linear system illustrated in this diagram. Given an
-unstructured mesh like the one in the top left, assembly requires numerically
-evaluating a problem- or PDE-specific integral for each element (or facet) of
-the mesh. The nice property of the FEM we will make use of is that these
-operations are *local* and *independent*, which means they're amenable to
-parallelisation.
+We're interested in solving partial differential equations, PDEs for
+short, using the finite element method, which is popular in science and
+engineering.  I'm not going to assume everyone is familar with the
+method and not go into any mathematical detail. This talk is really
+about some of the advantages we get by solving this problem in Python
+and and how we can do that without sacrificing performance.
+
+Therefore just a very high level overview of the FEM: we partition the
+domain where we want to solve the PDE into an unstructured mesh of cells
+and numerically evaluate a problem- or PDE-specific integral for each
+cell. When we've done that we're accumulating those contributions into a
+large sparse linear system of equations which we can solve with an
+iterative solver.
+
+Let me just highlight a property which makes the FEM very well suited
+for solving computationally: these integral evaluations are *local*,
+*independent* and *unform* which means we can execute them in parallel.
 
 ---
 
