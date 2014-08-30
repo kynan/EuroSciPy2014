@@ -536,8 +536,9 @@ familiar to any DOLFIN user modulo the import from Firedrake.
   ```
   * Jacobian known to be `a`
   * **Always** solved in a single Newton (nonlinear) iteration
-* Use Newton-like methods from PETSc SNES
+* Use Newton-like methods from PETSc SNES (optimised C library)
 * PETSc SNES requires two callbacks to evaluate residual and Jacobian:
+  * implemented as Python functiones (supported by petsc4py)
   * evaluate residual by assembling residual form
     ```python
     assemble(F, tensor=F_tensor)
@@ -546,6 +547,7 @@ familiar to any DOLFIN user modulo the import from Firedrake.
     ```python
     assemble(J, tensor=J_tensor, bcs=bcs)
     ```
+  * `assemble` invokes PyOP2 with kernels generated from `F` and `J`
 
 ???
 
