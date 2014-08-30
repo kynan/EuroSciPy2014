@@ -370,10 +370,12 @@ Kernels as abstract syntax tree (AST), C string or Python function
 ???
 
 Simple example programme: compute midpoint of all cells in mesh
-* kernel: C string, local view of the data, sequential semantics
+* kernel: typically generated (by FFC in case of Firedrake or e.g.
+  SymPy), specified as AST or C string ("back door")
+* can perform backend specific optimisations on AST
+* kernel: local view of the data, sequential semantics
 * parallel loop arguments: kernel, iteration set + access descriptors
 * access descriptors match kernel parameters, define local view for the kernel
-* fully programmatic via an AST, but there's a "back door": C string
 
 ---
 
