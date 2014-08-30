@@ -321,6 +321,12 @@ PyOP2 architecture shown in this diagram:
 
 ---
 
+## PyOP2 Device Data Management
+
+.scale[![PyOP2 device data state](images/pyop2_device_data_state.svg)]
+
+---
+
 .left-column[
 ## PyOP2 Kernels & Parallel Loops
 
