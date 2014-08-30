@@ -29,6 +29,12 @@ Python bindings for Message Passing Interface (MPI)
 
 ---
 
+## PyOP2 Device Data State
+
+.scale[![PyOP2 device data state](images/pyop2_device_data_state.svg)]
+
+---
+
 ## Distributed Parallel Computations with MPI
 
 .scale[![Decomposed mesh](images/pyop2_mpi_mesh.svg)]
