@@ -562,24 +562,6 @@ familiar to any DOLFIN user modulo the import from Firedrake.
 
 ---
 
-## Solve implementation
-```python
-def solve(problem, solution,
-          bcs=None, J=None,
-          solver_parameters=None)
-```
-
-1. If problem is linear, transform into residual form
-2. If no Jacobian provided, compute Jacobian by automatic differentiation
-3. Set up PETSc SNES solver (parameters user configurable)
-4. Assign residual and Jacobian forms for SNES callbacks
-5. Solve nonlinear problem. For each nonlinear iteration:
-    * assemble Jacobian matrix
-    * assemble residual vector
-    * solve linear system using PETSc KSP
-
----
-
 ## Summary and additional features
 
 ### Summary
