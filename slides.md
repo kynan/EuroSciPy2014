@@ -564,6 +564,28 @@ familiar to any DOLFIN user modulo the import from Firedrake.
 
 ---
 
+## How do Firedrake/PyOP2 achieve good performance?
+
+* No computationally expensive computations (inner loops) in pure Python
+* Call optimised libraries where possible (PETSc)
+* Expensive library code implemented in Cython (sparsity builder)
+* Kernel application over the mesh in natively generated code
+* Python is not just glue!
+
+### Caching
+
+* Firedrake
+  * Assembled operators
+  * Function spaces cached on meshes
+  * FFC-generated kernel code
+* PyOP2
+  * ``Maps`` cached on ``Sets``
+  * Sparsity patterns
+  * JIT-compiled code
+* Only data isn't cached (``Function``/``Dat``)
+
+---
+
 ## Summary and additional features
 
 ### Summary
