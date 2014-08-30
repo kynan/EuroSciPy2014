@@ -4,6 +4,31 @@ class: center, middle, inverse
 
 ---
 
+## Summary and additional features
+
+### Summary
+* Two-layer abstraction for FEM computation from high-level descriptions
+  * Firedrake: a performance-portable finite-element computation framework  
+    *Drive FE computations from a high-level problem specification*
+  * PyOP2: a high-level interface to unstructured mesh based methods  
+    *Efficiently execute kernels over an unstructured grid in parallel*
+* Decoupling of Firedrake (FEM) and PyOP2 (parallelisation) layers
+* Firedrake concepts implemented with PyOP2/PETSc constructs
+* Portability for unstructured mesh applications: FEM, non-FEM or combinations
+* Extensible framework beyond FEM computations (e.g. image processing)
+
+--
+
+### Firedrake features not covered
+* Automatic optimization of generated assembly kernels with COFFEE
+* Solving PDEs on extruded (semi-structured) meshes
+* Building meshes using PETSc DMPlex
+* Using fieldsplit preconditioners for mixed problems
+* Solving PDEs on immersed manifolds
+* ...
+
+---
+
 ## Portable, Extensible Toolkit for Scientific Computation (PETSc)
 
 .left70[
