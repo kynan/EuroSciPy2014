@@ -2,11 +2,11 @@ class: center, middle, inverse
 
 # Firedrake: a High-level, Portable Finite Element Computation Framework
 
-## http://firedrakeproject.org
+## https://firedrakeproject.org
 
 ## **Florian Rathgeber**<sup>1</sup>, Lawrence Mitchell<sup>1</sup>, David Ham<sup>1,2</sup>, Michael Lange<sup>3</sup>, Andrew McRae<sup>2</sup>, Fabio Luporini<sup>1</sup>, Gheorghe-teodor Bercea<sup>1</sup>, Paul Kelly<sup>1</sup>
 
-Slides: http://kynan.github.io/EuroSciPy2014
+Slides: https://kynan.github.io/EuroSciPy2014
 
 .footnote[<sup>1</sup> Department of Computing, Imperial College London
 <sup>2</sup> Department of Mathematics, Imperial College London  
@@ -83,7 +83,7 @@ solve(a == L, p)
 ```
 
 [Unified Form Language (UFL)](https://bitbucket.org/fenics-project/ufl)
-from the [FEniCS project](http://fenicsproject.org) to describe weak
+from the [FEniCS project](https://fenicsproject.org) to describe weak
 form of PDE
 
 ???
@@ -121,7 +121,7 @@ operations).
 
 --
 
-.scale[![Firedrake](http://firedrakeproject.org/_static/banner.png)]
+.scale[![Firedrake](https://firedrakeproject.org/_static/banner.png)]
 
 > Firedrake is an automated system for the portable solution of partial
 > differential equations using the finite element method (FEM).
@@ -662,10 +662,10 @@ Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber), <f.ra
 ### Resources
 
   * **PyOP2** https://github.com/OP2/PyOP2
-    * *[PyOP2: A High-Level Framework for Performance-Portable Simulations on Unstructured Meshes](http://dx.doi.org/10.1109/SC.Companion.2012.134)*
+    * *[PyOP2: A High-Level Framework for Performance-Portable Simulations on Unstructured Meshes](https://dx.doi.org/10.1109/SC.Companion.2012.134)*
       Florian Rathgeber, Graham R. Markall, Lawrence Mitchell, Nicholas Loriant, David A. Ham, Carlo Bertolli, Paul H.J. Kelly,
       WOLFHPC 2012
-    * *[Performance-Portable Finite Element Assembly Using PyOP2 and FEniCS](http://link.springer.com/chapter/10.1007/978-3-642-38750-0_21)*
+    * *[Performance-Portable Finite Element Assembly Using PyOP2 and FEniCS](https://link.springer.com/chapter/10.1007/978-3-642-38750-0_21)*
        Graham R. Markall, Florian Rathgeber, Lawrence Mitchell, Nicolas Loriant, Carlo Bertolli, David A. Ham, Paul H. J. Kelly ,
        ISC 2013
   * **Firedrake** https://github.com/firedrakeproject/firedrake
@@ -675,6 +675,6 @@ Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber), <f.ra
   * **UFL** https://bitbucket.org/mapdes/ufl
   * **FFC** https://bitbucket.org/mapdes/ffc
 
-**This talk** is available at http://kynan.github.io/EuroSciPy2014 ([source](https://github.com/kynan/EuroSciPy2014))
+**This talk** is available at https://kynan.github.io/EuroSciPy2014 ([source](https://github.com/kynan/EuroSciPy2014))
 
-Slides created with [remark](http://remarkjs.com)
+Slides created with [remark](https://remarkjs.com)
