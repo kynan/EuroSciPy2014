@@ -657,7 +657,7 @@ Formulation with 1st order time derivatives:
 
 ## Thank you!
 
-Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber), <f.rathgeber@imperial.ac.uk>
+Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber)
 
 ### Resources
 
@@ -669,9 +669,9 @@ Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber), <f.ra
        Graham R. Markall, Florian Rathgeber, Lawrence Mitchell, Nicolas Loriant, Carlo Bertolli, David A. Ham, Paul H. J. Kelly ,
        ISC 2013
   * **Firedrake** https://github.com/firedrakeproject/firedrake
-    * *COFFEE: an Optimizing Compiler for Finite Element Local Assembly*
+    * *[Cross-Loop Optimization of Arithmetic Intensity for Finite Element Local Assembly](https://dx.doi.org/10.1145/2687415)*
       Fabio Luporini, Ana Lucia Varbanescu, Florian Rathgeber, Gheorghe-Teodor Bercea, J. Ramanujam, David A. Ham, Paul H. J. Kelly,
-      submitted
+      ACM Transactions on Architecture and Code Optimization, January 2015
   * **UFL** https://bitbucket.org/mapdes/ufl
   * **FFC** https://bitbucket.org/mapdes/ffc
 
