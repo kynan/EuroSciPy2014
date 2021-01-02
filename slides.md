@@ -655,10 +655,6 @@ Formulation with 1st order time derivatives:
 
 ---
 
-## Thank you!
-
-Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber)
-
 ### Resources
 
   * **PyOP2** https://github.com/OP2/PyOP2
@@ -676,5 +672,7 @@ Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber)
   * **FFC** https://bitbucket.org/mapdes/ffc
 
 **This talk** is available at https://kynan.github.io/EuroSciPy2014 ([source](https://github.com/kynan/EuroSciPy2014))
+
+Contact: Florian Rathgeber, [@frathgeber](https://twitter.com/frathgeber)
 
 Slides created with [remark](https://remarkjs.com)
