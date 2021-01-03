@@ -1,6 +1,6 @@
 # Firedrake: a High-level, Portable Finite Element Computation Framework
 
-## http://firedrakeproject.org
+## https://firedrakeproject.org
 
 ## **Florian Rathgeber**<sup>1</sup>, Lawrence Mitchell<sup>1</sup>, David Ham<sup>1,2</sup>, Michael Lange<sup>3</sup>, Andrew McRae<sup>2</sup>, Fabio Luporini<sup>1</sup>, Gheorghe-teodor Bercea<sup>1</sup>, Paul Kelly<sup>1</sup>
 
@@ -10,7 +10,7 @@
 
 Slides from [my talk](https://www.euroscipy.org/2014/schedule/presentation/15/)
 at the [EuroSciPy](https://www.euroscipy.org/2014/), Cambridge, UK,
-August 29-30 2014: http://kynan.github.io/EuroSciPy2014
+August 29-30 2014: https://kynan.github.io/EuroSciPy2014
 
 ### Abstract
 
@@ -50,24 +50,24 @@ source. Performance matches or exceeds what is realistically attainable
 by hand-written code. Both projects are open source and developed at
 Imperial College London.
 
-[PyOP2]: http://op2.github.io/PyOP2
-[Firedrake]: http://firedrakeproject.org
-[FEniCS project]: http://fenicsproject.org
+[PyOP2]: https://op2.github.io/PyOP2
+[Firedrake]: https://firedrakeproject.org
+[FEniCS project]: https://fenicsproject.org
 [UFL]: https://bitbucket.org/fenics-project/ufl/
 [FFC]: https://bitbucket.org/fenics-project/ffc/
 
 ### Resources
 
-  * **PyOP2** https://github.com/OP2/PyOP2
-    * *[PyOP2: A High-Level Framework for Performance-Portable Simulations on Unstructured Meshes](http://dx.doi.org/10.1109/SC.Companion.2012.134)*
+  * **[PyOP2](https://github.com/OP2/PyOP2)**
+    * *[PyOP2: A High-Level Framework for Performance-Portable Simulations on Unstructured Meshes](https://dx.doi.org/10.1109/SC.Companion.2012.134)*
       Florian Rathgeber, Graham R. Markall, Lawrence Mitchell, Nicholas Loriant, David A. Ham, Carlo Bertolli, Paul H.J. Kelly,
       WOLFHPC 2012
-    * *[Performance-Portable Finite Element Assembly Using PyOP2 and FEniCS](http://link.springer.com/chapter/10.1007/978-3-642-38750-0_21)*
+    * *[Performance-Portable Finite Element Assembly Using PyOP2 and FEniCS](https://link.springer.com/chapter/10.1007/978-3-642-38750-0_21)*
        Graham R. Markall, Florian Rathgeber, Lawrence Mitchell, Nicolas Loriant, Carlo Bertolli, David A. Ham, Paul H. J. Kelly ,
        ISC 2013
-  * **Firedrake** https://github.com/firedrakeproject/firedrake
-    * *COFFEE: an Optimizing Compiler for Finite Element Local Assembly*
+  * **[Firedrake](https://github.com/firedrakeproject/firedrake)**
+    * *[Cross-Loop Optimization of Arithmetic Intensity for Finite Element Local Assembly](https://dx.doi.org/10.1145/2687415)*
       Fabio Luporini, Ana Lucia Varbanescu, Florian Rathgeber, Gheorghe-Teodor Bercea, J. Ramanujam, David A. Ham, Paul H. J. Kelly,
-      submitted
-  * **UFL** https://bitbucket.org/mapdes/ufl
-  * **FFC** https://bitbucket.org/mapdes/ffc
+      ACM Transactions on Architecture and Code Optimization, January 2015
+  * **[UFL](https://github.com/firedrakeproject/ufl)**
+  * **[FFC](https://github.com/firedrakeproject/ffc)**

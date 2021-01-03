@@ -668,8 +668,8 @@ Formulation with 1st order time derivatives:
     * *[Cross-Loop Optimization of Arithmetic Intensity for Finite Element Local Assembly](https://dx.doi.org/10.1145/2687415)*
       Fabio Luporini, Ana Lucia Varbanescu, Florian Rathgeber, Gheorghe-Teodor Bercea, J. Ramanujam, David A. Ham, Paul H. J. Kelly,
       ACM Transactions on Architecture and Code Optimization, January 2015
-  * **UFL** https://bitbucket.org/mapdes/ufl
-  * **FFC** https://bitbucket.org/mapdes/ffc
+  * **UFL** https://github.com/firedrakeproject/ufl
+  * **FFC** https://github.com/firedrakeproject/ffc
 
 **This talk** is available at https://kynan.github.io/EuroSciPy2014 ([source](https://github.com/kynan/EuroSciPy2014))
 
